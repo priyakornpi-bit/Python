@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 ข้อความจากต้นต้น</title>
+    <style>
+        /* ส่วนของ CSS สำหรับจัดรูปแบบ */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+            align-items: center;    /* จัดให้อยู่ตรงกลางแนวตั้ง */
+            min-height: 100vh;      /* ความสูงเต็มหน้าจอ */
+            margin: 0;
+            background-color: #fce4ec; /* สีชมพูอ่อน (Pink Pastel) */
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            animation: fadeIn 2s ease-in-out; /* เพิ่มแอนิเมชันให้ค่อยๆ ปรากฏ */
+        }
+
+        h1 {
+            color: #e91e63; /* สีแดงอมชมพูเข้ม */
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: #795548; /* สีน้ำตาลอบอุ่น */
+        }
+
+        /* แอนิเมชันสำหรับให้ข้อความปรากฏอย่างนุ่มนวล */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .heart {
+            color: #ff4081; /* สีหัวใจ */
+            font-size: 1.5em;
+            animation: pulse 1s infinite; /* แอนิเมชันหัวใจเต้น */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart">❤️❤️❤️</div>
+        <h1>ถึงเอเน็ต</h1>
+        
+        <p>
+            ตั้งแต่วันที่เราได้รู้จักกัน โลกของฉันก็เปลี่ยนไปเป็นสีชมพูเสมอมา 
+            เธอเป็นเหมือนแสงสว่างที่ทำให้วันธรรมดากลายเป็นวันที่พิเศษที่สุด
+        </p>
+        <p>
+            ขอบคุณที่เป็นรอยยิ้ม, เป็นกำลังใจ, และเป็นทุกอย่าง 
+            รู้ไหมว่าทุกครั้งที่คิดถึงเธอ ใจฉันก็เต็มไปด้วยความสุขอย่างบอกไม่ถูก
+        </p>
+        <p>
+            <span style="font-size: 1.5em; font-weight: bold;">ฉันรักเธอที่สุดในโลกเลยนะ</span>
+        </p>
+        
+        <p class="signature">- จากคนที่รักเธอหมดใจ -</p>
+        </div>
+
+</body>
+</html>
