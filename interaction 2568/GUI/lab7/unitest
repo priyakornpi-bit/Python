@@ -1,0 +1,98 @@
+import unittest
+
+class TestAssertionExamples(unittest.TestCase):
+
+    def test_assertEqual(self):
+        # assertEqual(a, b) - Verify that a equals b
+        result = 5 + 5
+        expected = 10
+        self.assertEqual(result, expected, "Addition should equal 10")
+
+    def test_assertTrue(self):
+        # assertTrue(x) - Verify that x is True
+        is_valid = len("hello") > 0
+        self.assertTrue(is_valid, "String should have length greater than 0")
+
+    def test_assertFalse(self):
+        # assertFalse(x) - Verify that x is False
+        is_empty = len([]) > 0
+        self.assertFalse(is_empty, "Empty list length should not be greater than 0")
+
+    def test_assertRaises(self):
+        # assertRaises(exception, callable, *args) - Verify that calling a function raises an exception
+        def divide_by_zero():
+            return 1/0
+        self.assertRaises(ZeroDivisionError, divide_by_zero)
+
+    def test_assertIn(self):
+        # assertIn(a, b) - Verify that a is in b (list, tuple, etc.)
+        fruits = ["apple", "banana", "cherry"]
+        self.assertIn("banana", fruits, "banana should be in the fruits list")
+
+    def test_assertIsInstance(self):
+        # assertIsInstance(a, Type) - Verify that a is an instance of Type
+        value = "test string"
+        self.assertIsInstance(value, str, "value should be a string")
+
+    def test_assertNotEqual(self):
+        # assertNotEqual(a, b) - Verify that a does not equal b
+        self.assertNotEqual(5, 10, "5 should not equal 10")
+
+    def test_assertIs(self):
+        # assertIs(a, b) - Verify that a is b (same object identity)
+        a = [1, 2, 3]
+        b = a  # b references the same object as a
+        self.assertIs(a, b, "a and b should reference the same object")
+
+    def test_assertIsNot(self):
+        # assertIsNot(a, b) - Verify that a is not b (different object identity)
+        a = [1, 2, 3]
+        b = [1, 2, 3]  # Same content but different object
+        self.assertIsNot(a, b, "a and b should be different objects")
+
+    def test_assertNotIn(self):
+        # assertNotIn(a, b) - Verify that a is not in b
+        numbers = [1, 2, 3, 4, 5]
+        self.assertNotIn(10, numbers, "10 should not be in the numbers list")
+
+    def test_assertIsNone(self):
+        # assertIsNone(x) - Verify that x is None
+        value = None
+        self.assertIsNone(value, "value should be None")
+
+    def test_assertIsNotNone(self):
+        # assertIsNotNone(x) - Verify that x is not None
+        value = "something"
+        self.assertIsNotNone(value, "value should not be None")
+
+    def test_assertAlmostEqual(self):
+        # assertAlmostEqual(a, b) - Verify that a and b are almost equal (for floating point)
+        self.assertAlmostEqual(0.1 + 0.2, 0.3, places=7, msg="Floating point addition should be almost equal")
+
+    def test_assertGreater(self):
+        # assertGreater(a, b) - Verify that a > b
+        self.assertGreater(10, 5, "10 should be greater than 5")
+
+    def test_assertGreaterEqual(self):
+        # assertGreaterEqual(a, b) - Verify that a >= b
+        self.assertGreaterEqual(10, 10, "10 should be greater than or equal to 10")
+
+    def test_assertLess(self):
+        # assertLess(a, b) - Verify that a < b
+        self.assertLess(5, 10, "5 should be less than 10")
+
+    def test_assertLessEqual(self):
+        # assertLessEqual(a, b) - Verify that a <= b
+        self.assertLessEqual(5, 5, "5 should be less than or equal to 5")
+
+    def test_assertRegex(self):
+        # assertRegex(text, regex) - Verify that regex matches text
+        self.assertRegex("hello world", r"hello", "Text should match the regex pattern")
+
+    def test_assertCountEqual(self):
+        # assertCountEqual(a, b) - Verify that a and b have the same elements (ignoring order)
+        self.assertCountEqual([1, 2, 3], [3, 1, 2], "Lists should have the same elements regardless of order")
+
+if __name__ == '__main__':
+    unittest.main()
+    
